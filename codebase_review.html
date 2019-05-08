@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Codebase Review Workflow &mdash; comsesnet 1.0.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Discourse" href="discourse.html" />
+    <link rel="prev" title="Administering CoMSES.net" href="admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> comsesnet
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Administering CoMSES.net</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Codebase Review Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#review-statuses">Review statuses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-workflow">Sample workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review-roles">Review roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review-configuration">Review configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="discourse.html">Discourse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">comsesnet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Codebase Review Workflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/codebase_review.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="codebase-review-workflow">
+<h1>Codebase Review Workflow<a class="headerlink" href="#codebase-review-workflow" title="Permalink to this headline">¶</a></h1>
+<p>Review workflow for the CoMSES computational model library that enables authors to submit a specific codebase version for a peer review certification process similar in spirit to PlOS One, i.e., a structural / software integrity review that checks:</p>
+<ol class="arabic simple">
+<li><p>Does the codebase have accompanying narrative documentation?</p></li>
+<li><p>Is the code clean / well-written / well-commented? (formatted properly, etc.)</p></li>
+<li><p>Can you run the model with the provided instructions?</p></li>
+</ol>
+<p>Each of these questions has two other fields associated with it:</p>
+<ol class="arabic simple">
+<li><p>a select box “Does not meet standards”, “Partially meets standards”, “Fully meets standards”</p></li>
+<li><p>Free form notes field</p></li>
+</ol>
+<p>At the end, a final recommendation:
+1. Do not certify / deny
+2. Revise and resubmit
+3. Certify / accept</p>
+<div class="section" id="review-statuses">
+<h2>Review statuses<a class="headerlink" href="#review-statuses" title="Permalink to this headline">¶</a></h2>
+<p>Reviews have the following statuses:</p>
+<ol class="arabic simple">
+<li><p>Review requested (editor needs to invite a peer reviewer)</p></li>
+<li><p>Reviewers invited (editor sent emails to candidate peer reviewers who will accept / decline the request to review the given codebase)</p></li>
+<li><p>Reviewer accepted (candidate peer reviewer will perform the codebase review, timer is set to periodically remind the reviewer and after a certain amount of time, the editor also needs to be notified)</p></li>
+<li><p>Reviewer declined (editor action required, go back to step 2 to invite candidate peer reviewers)</p></li>
+<li><p>Review completed (peer reviewer has filled out the codebase review form and submit a final recommendation to be taken by the editor)</p></li>
+<li><p>The editor has the final say whether or not to accept the reviewer’s recommendation and will manually change the status of the review to <cite>Accepted, Denied, or Revise/Resubmit</cite></p></li>
+<li><p>If revise / resubmit, the author can make changes to their codebase version and then resubmit it for review, which brings it back to Step 1 (with the history of changes preserved).</p></li>
+</ol>
+</div>
+<div class="section" id="sample-workflow">
+<h2>Sample workflow<a class="headerlink" href="#sample-workflow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Codebase submitter requests a review for a specific codebase release version</p></li>
+<li><p>Review shows up in an admin / editor visible queue with the appropriate status</p></li>
+<li><p>Review manager / admin selects a review in the New Review Requests queue and selects (one or more) candidate reviewer(s) to invite via customized form-letter email</p></li>
+<li><p>Candidate reviewers can be a Full CoMSES Member, any user that has published a model in the Model Library, or an outside individual not registered on the site. (All reviewers who accept the model review will gain full CoMSES member status if they do not already possess that status.)</p></li>
+<li><p>Search interface to find candidate reviewers (probably by tags related to a user, either via the profile or past codebase release submissions)</p></li>
+<li><p>Candidate reviewer listings should also show review metadata many times they’ve been invited, accepted, or declined to review.</p></li>
+<li><p>Outside candidates can be provided by entering their name and email address. If a non-registered user is invited to perform a review they are given a fast-track link that, if they accept the offer to review the model, registers them as a CoMSES member.</p></li>
+<li><p>If a user who has published a model in the Model Library who is not a full CoMSES member accepts the offer to review a model, that user is then registered as a full CoMSES member.</p></li>
+<li><p>CoMSES Editor selects N candidates from the pool and clicks a button to send an email to them inviting them to review the model. The existing email templates are currently stored in the DB, accessible via admin/config/comses_settings/modelreviews/templates</p></li>
+<li><p>The email invitation offers the candidate a choice to accept or decline the review. If the candidate reviewer declines the review, they can submit additional suggested reviewers (in a single textfield to be shown to the CoMSES Editor).</p></li>
+<li><p>If a candidate declines to review, the editor is notified to select a new candidate to invite</p></li>
+<li><p>Each reviewer is given <cite>X</cite> days to complete their review.</p></li>
+<li><p>A reminder email should be sent to a reviewer after <cite>Y, Y&lt;X</cite> days to remind them to complete their review.</p></li>
+<li><p>As each reviewer submits their model review, an email is sent to the Editor Manager, informing them.</p></li>
+<li><p>Once all N reviewers have completed their reviews, the Editor is notified that their attention is required on the case.</p></li>
+<li><p>Editor reviews case and reviewer recommendations. He/she makes a determination on whether the model certification should be Reviewed, Declined, or Revise and Resubmit and notifies the author with relevant, curated review info.</p></li>
+<li><p>If the review is determined to be “Reviewed”, Editor closes case, the model is flagged as peer reviewed, the Editor generates a DOI for the model, and an email is sent informing the author.</p></li>
+<li><p>If the review is determined to be “Declined”, the case is closed, and an email is sent to the author notifying them of the decision (NOTE: when will this ever happen?)</p></li>
+</ul>
+</div>
+<div class="section" id="review-roles">
+<h2>Review roles<a class="headerlink" href="#review-roles" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>all CoMSES Members can submit a codebase release version for review.</p></li>
+<li><p>CoMSES Editor manages an individual model review case and finds reviewers for the model</p></li>
+<li><p>full CoMSES Members can serve as individual reviewers if they accept the review (excepting the submitter of course)</p></li>
+</ul>
+</div>
+<div class="section" id="review-configuration">
+<h2>Review configuration<a class="headerlink" href="#review-configuration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Number of reviewers</dt><dd><ul>
+<li><p>integer</p></li>
+<li><p>the default number of reviewers to invite for a model review</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Days to complete review</dt><dd><ul>
+<li><p>integer</p></li>
+<li><p>the number of days the reviewers have to submit the review before receiving daily notifications</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="discourse.html" class="btn btn-neutral float-right" title="Discourse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="admin.html" class="btn btn-neutral float-left" title="Administering CoMSES.net" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CoMSES
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
